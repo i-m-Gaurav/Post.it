@@ -49,8 +49,8 @@ const MyProfile = () => {
 
   return (
     <Profile
-      name={session?.user.name}
-      desc='Here are some of the posts...'
+      name='My'
+      desc='Here are some of my posts ...'
       data={myPosts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
