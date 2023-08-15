@@ -50,11 +50,7 @@ const MyProfile = () => {
   return (
     <Profile
       name='My'
-<<<<<<< HEAD
       desc='Here are some of my posts ...'
-=======
-      desc='Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination'
->>>>>>> parent of 4e0e96b (changed some env)
       data={myPosts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
