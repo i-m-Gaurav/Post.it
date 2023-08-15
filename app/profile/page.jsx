@@ -49,7 +49,7 @@ const MyProfile = () => {
 
   return (
     <Profile
-      name='My'
+      name={session?.user.name}
       desc='Here are some of the posts...'
       data={myPosts}
       handleEdit={handleEdit}
