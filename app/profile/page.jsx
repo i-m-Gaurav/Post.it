@@ -14,7 +14,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/users/${session?.user.id}/posts`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/users/${session?.user.id}/posts`);
       const data = await response.json();
 
       setMyPosts(data);
@@ -24,7 +24,7 @@ const MyProfile = () => {
   }, [session?.user.id]);
 
   const handleEdit = (post) => {
-    router.push(`/update-prompt?id=${post._id}`);
+    router.push(`${process.env.NEXT_PUBLIC_HOST}/update-prompt?id=${post._id}`);
   };
 
   const handleDelete = async (post) => {
@@ -34,7 +34,7 @@ const MyProfile = () => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`/api/prompt/${post._id.toString()}`, {
+        await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/prompt/${post._id.toString()}`, {
           method: "DELETE",
         });
 
