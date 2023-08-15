@@ -30,7 +30,7 @@ const Feed = () => {
     const response = await fetch(`/api/prompt`);
     const data = await response.json();
 
-    setAllPosts(data);
+    setAllPosts(data.reverse());
   };
 
   useEffect(() => {
