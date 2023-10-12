@@ -4,7 +4,7 @@ import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 
 export const metadata = {
-  title: "Post!T",
+  title: "Prompt Store",
   description: "Discover & Share Fun Posts",
 };
 
